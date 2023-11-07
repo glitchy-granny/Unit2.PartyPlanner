@@ -4,18 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Party Planner</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <h1>Party Planner</h1>
 
-    <div id="party-list"></div>
+    <ul id="partyList"></ul>
 
     <form id="new-party-form">
         <input type="text" id="party-name" placeholder="Name" required />
-        <input type="datetime-local" id="party-date" required />
+        <input type="date" id="party-date" required />
+        <input type="time" id="party-time" required />
         <input type="text" id="party-location" placeholder="Location" required />
+
         <textarea id="party-description" placeholder="Description"></textarea>
         <button type="submit">Add Party</button>
     </form>
