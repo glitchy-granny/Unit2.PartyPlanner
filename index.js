@@ -3,17 +3,6 @@ const EVENTS_ENDPOINT = `${BASE_URL}/events`;
 
 const PARTY_LIST = document.getElementById('partyList');
 
-function renderEvents(events) {
-
-    PARTY_LIST.innerHTML = '';
-    for (let event of events) {
-        let eventListItem = document.createElement("li");
-
-        eventListItem.textContent = `Name: ${event.name} Description: ${event.description} Date: ${event.date} Location: ${event.location}`;
-        PARTY_LIST.append(eventListItem);
-    }
-}
-
 
 async function fetchEvents() {
     try {
@@ -30,6 +19,24 @@ async function fetchEvents() {
         console.error(error);
     }
 }
+
+const events = [
+
+
+]
+
+function renderEvents(events) {
+
+    PARTY_LIST.innerHTML = '';
+    for (let event of events) {
+        let eventListItem = document.createElement("li");
+
+        eventListItem.textContent = `Name: ${event.name} Description: ${event.description} Date: ${event.date} Location: ${event.location}`;
+        PARTY_LIST.append(eventListItem);
+    }
+}
+
+
 
 
 fetchEvents();
