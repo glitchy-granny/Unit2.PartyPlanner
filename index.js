@@ -15,15 +15,13 @@ async function fetchEvents() {
         const events = jsonResponse.data;
         renderEvents(events);
 
+
     } catch (error) {
         console.error(error);
     }
 }
 
-const events = [
-
-
-]
+fetchEvents();
 
 function renderEvents(events) {
 
@@ -39,4 +37,3 @@ function renderEvents(events) {
 
 
 
-fetchEvents();
