@@ -14,7 +14,7 @@ FORM.addEventListener("submit", async (event) => {
 
   const newPartyData = {
     name: partyName,
-    date: new Date(partyDate + "T" + partyTime).toISOString(),
+    date: `${partyDate}${partyTime}`,
     location: partyLocation,
     description: partyDescription,
   };
