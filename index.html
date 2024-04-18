@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Party Planner</title>
-    <link rel="stylesheet" href="index.css">
-</head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-<body>
+  <body>
     <h1>Party Planner</h1>
 
     <ul id="partyList"></ul>
 
     <form id="new-party-form">
-        <input type="text" id="party-name" placeholder="Name" required />
-        <input type="date" id="party-date" required />
-        <input type="time" id="party-time" required />
-        <input type="text" id="party-location" placeholder="Location" required />
+      <input type="text" id="party-name" placeholder="Name" required />
+      <input type="date" id="party-date" required />
+      <input type="time" id="party-time" required />
+      <input type="text" id="party-location" placeholder="Location" required />
 
-        <textarea name=" " id="party-description" placeholder="Party Description" cols="5" rows="5" required></textarea>
+      <textarea
+        id="party-description"
+        placeholder="Party Description"
+        cols="5"
+        rows="5"
+        required
+      ></textarea>
 
-
-        <button type="submit">Schedule Party</button>
+      <button type="submit">Schedule Party</button>
     </form>
 
     <script src="index.js"></script>
-</body>
-
+  </body>
 </html>
