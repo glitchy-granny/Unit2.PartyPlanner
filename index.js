@@ -2,11 +2,12 @@ const BASE_URL =
   "https://fsa-crud-2aa9294fe819.herokuapp.com/api/2308-ACC-ET-WEB-PT-B";
 const EVENTS_ENDPOINT = `${BASE_URL}/events`;
 const PARTY_LIST = document.getElementById("partyList");
+const FORM = document.getElementById("new-party-form");
 
 FORM.addEventListener("submit", async (event) => {
-  event.preventDefault(); // Prevent the form from submitting traditionally
+  event.preventDefault();
   const elements = FORM.elements;
-  const partyName = elements["party-name"].value; // Correct the element IDs to match HTML
+  const partyName = elements["party-name"].value;
   const partyDate = elements["party-date"].value;
   const partyTime = elements["party-time"].value;
   const partyLocation = elements["party-location"].value;
@@ -62,12 +63,13 @@ function createPartyCard(title, date, address, description) {
     PARTY_CARD_ADDRESS,
     PARTY_CARD_DESCRIPTION
   );
+
   PARTY_CARD.append(PARTY_CARD);
 
   const deleteButton = document.createElement("button");
   deleteButton.textContent = "Delete";
   deleteButton.onclick = function () {
-    deleteEvent(EVENTS.id);
+    deleteEvent(events.id);
   };
   PARTY_CARD.appendChild(deleteButton);
 
@@ -93,7 +95,7 @@ async function deleteEvent(eventId) {
       method: "DELETE",
     });
     if (!response.ok) throw new Error("Error on delete");
-    fetchEvents(); // Refresh the list
+    fetchEvents();
   } catch (error) {
     console.error("Delete error:", error);
   }
